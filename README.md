@@ -187,4 +187,10 @@ backend
 
 frontend
 |-- React Application
+|-- src
+    |-- components
+    |   |-- ProductForm.js
+    |   |-- ProposalForm.js
+    |-- App.js
+    |-- index.js
 ```
