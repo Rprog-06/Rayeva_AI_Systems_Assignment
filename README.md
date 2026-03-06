@@ -93,6 +93,64 @@ Generates sustainable product bundles for corporate clients based on their budge
 }
 ```
 
+## Designed Modules (Architecture Only)
+
+### Module 3 - AI Impact Reporting Generator
+
+This module generates sustainability impact reports for product orders.
+
+#### Architecture
+
+```text
+Order Completed
+      |
+      v
+Impact Calculation Engine
+      |
+      v
+AI Impact Generator
+      |
+      v
+Impact Report Stored in Database
+```
+
+#### Example Output
+
+```text
+Plastic Saved: 2.5 kg
+Carbon Avoided: 6.2 kg CO2
+Local Impact: Supports sustainable bamboo farming
+```
+
+### Module 4 - AI WhatsApp Support Bot
+
+This module provides automated customer support through WhatsApp.
+
+#### Architecture
+
+```text
+Customer Message (WhatsApp)
+        |
+        v
+Twilio Webhook
+        |
+        v
+AI Intent Detection
+        |
+        v
+Database Query
+        |
+        v
+Automated Response
+```
+
+Supported queries include:
+
+- Order status
+- Return policy
+- Refund requests
+- Escalation to human support
+
 ## System Architecture
 
 The system follows a modular architecture separating frontend, backend, AI services, and database layers.
@@ -193,4 +251,76 @@ frontend
     |   |-- ProposalForm.js
     |-- App.js
     |-- index.js
+## Designed Modules (Architecture Only)
+
+### Module 3 - AI Impact Reporting Generator
+
+This module generates sustainability impact reports for product orders.
+
+#### Architecture
+
+```text
+Order Completed
+      |
+      v
+Impact Calculation Engine
+      |
+      v
+AI Impact Generator
+      |
+      v
+Impact Report Stored in Database
 ```
+
+#### Example Output
+
+```text
+Plastic Saved: 2.5 kg
+Carbon Avoided: 6.2 kg CO2
+Local Impact: Supports sustainable bamboo farming
+```
+
+### Module 4 - AI WhatsApp Support Bot
+
+This module provides automated customer support through WhatsApp.
+
+#### Architecture
+
+```text
+Customer Message (WhatsApp)
+        |
+        v
+Twilio Webhook
+        |
+        v
+AI Intent Detection
+        |
+        v
+Database Query
+        |
+        v
+Automated Response
+```
+
+Supported queries include:
+
+- Order status
+- Return policy
+- Refund requests
+- Escalation to human support
+
+## System Architecture
+
+The system follows a modular architecture separating frontend, backend, AI services, and database layers.
+
+
+
+
+
+
+
+
+
+
+```
+
