@@ -1,42 +1,42 @@
-Project Overview
+﻿# Rayeva AI Systems Assignment
 
-The goal of this system is to build AI modules that:
+## Project Overview
 
-Automatically categorize sustainable products
+This system builds AI modules that:
 
-Generate SEO tags and sustainability filters
+- Automatically categorize sustainable products
+- Generate SEO tags and sustainability filters
+- Create B2B product proposals based on budget
+- Store AI outputs in a database
+- Provide scalable architecture for future AI features
 
-Create B2B product proposals based on budget
+## Implemented Modules
 
-Store AI outputs in a database
-
-Provide a scalable architecture for future AI features
-
-Implemented Modules
-Module 1 — AI Auto Category & Tag Generator
+### Module 1 - AI Auto Category and Tag Generator
 
 Automatically categorizes products and generates metadata for sustainable product catalogs.
 
-Features
+#### Features
 
-Auto assigns product category
+- Auto-assigns product category
+- Suggests sub-category
+- Generates 5-10 SEO tags
+- Suggests sustainability filters
+- Returns structured JSON
+- Stores results in MongoDB
 
-Suggests sub-category
+#### Example Input
 
-Generates 5–10 SEO tags
-
-Suggests sustainability filters
-
-Returns structured JSON
-
-Stores results in MongoDB
-
-Example Input
+```json
 {
   "name": "Bamboo Toothbrush",
   "description": "Eco friendly biodegradable toothbrush made from bamboo."
 }
-Example Output
+```
+
+#### Example Output
+
+```json
 {
   "category": "Oral Care",
   "sub_category": "Toothbrush",
@@ -53,32 +53,36 @@ Example Output
     "biodegradable"
   ]
 }
-Module 2 — AI B2B Proposal Generator
+```
+
+### Module 2 - AI B2B Proposal Generator
 
 Generates sustainable product bundles for corporate clients based on their budget.
 
-Features
+#### Features
 
-Suggests sustainable product mix
+- Suggests sustainable product mix
+- Generates budget allocation
+- Estimates total cost
+- Produces impact summary
+- Stores proposals in MongoDB
 
-Generates budget allocation
+#### Example Input
 
-Estimates total cost
-
-Produces impact summary
-
-Stores proposals in MongoDB
-
-Example Input
+```json
 {
   "budget": 5000,
   "companyType": "Corporate Office"
 }
-Example Output
+```
+
+#### Example Output
+
+```json
 {
   "product_mix": [
-    {"product": "Reusable Steel Bottle", "quantity": 200},
-    {"product": "Bamboo Toothbrush", "quantity": 500}
+    { "product": "Reusable Steel Bottle", "quantity": 200 },
+    { "product": "Bamboo Toothbrush", "quantity": 500 }
   ],
   "budget_allocation": {
     "steel_bottles": 3000,
@@ -87,90 +91,100 @@ Example Output
   "estimated_cost": 5000,
   "impact_summary": "This proposal reduces plastic waste and promotes sustainable corporate gifting."
 }
-System Architecture
+```
+
+## System Architecture
 
 The system follows a modular architecture separating frontend, backend, AI services, and database layers.
 
+```text
 Frontend (React)
-      │
-      ▼
+      |
+      v
 Backend API (Node.js / Express)
-      │
-      ├── Controllers
-      │
-      ├── AI Service Layer
-      │       └── Gemini API
-      │
-      └── Database Layer
-              └── MongoDB
-Architecture Diagram
+      |
+      +-- Controllers
+      |
+      +-- AI Service Layer
+      |     +-- Gemini API
+      |
+      +-- Database Layer
+            +-- MongoDB
+```
+
+### Architecture Diagram
+
+```text
 +----------------------+
 |      React UI        |
 |  Product / Proposal  |
 +----------+-----------+
            |
-           ▼
+           v
 +----------------------+
 |   Express Backend    |
 |    API Endpoints     |
 +----------+-----------+
            |
-           ▼
+           v
 +----------------------+
 |    AI Service Layer  |
 |      Gemini API      |
 +----------+-----------+
            |
-           ▼
+           v
 +----------------------+
 |      MongoDB         |
 | Products / Proposals |
 +----------------------+
-Technology Stack
-Frontend
+```
 
-React
+## Technology Stack
 
-Axios
+### Frontend
 
-Backend
+- React
+- Axios
 
-Node.js
+### Backend
 
-Express
+- Node.js
+- Express
 
-AI Integration
+### AI Integration
 
-Google Gemini API
+- Google Gemini API
 
-Database
+### Database
 
-MongoDB
+- MongoDB
+- Mongoose
 
-Mongoose
+## Project Folder Structure
 
-Project Folder Structure
+```text
 backend
- ├── config
- │     db.js
- │
- ├── controller
- │     productController.js
- │     proposalController.js
- │
- ├── models
- │     Product.js
- │     Proposal.js
- │
- ├── routes
- │     productRoutes.js
- │     proposalRoutes.js
- │
- ├── service
- │     aiService.js
- │     proposalAIService.js
- │
- └── server.js
+|-- config
+|   |-- db.js
+|
+|-- controller
+|   |-- productController.js
+|   |-- proposalController.js
+|
+|-- models
+|   |-- Product.js
+|   |-- Proposal.js
+|
+|-- routes
+|   |-- productRoutes.js
+|   |-- proposalRoutes.js
+|
+|-- service
+|   |-- aiService.js
+|   |-- proposalAIService.js
+|
+|-- server.js
 
 frontend
- └── React Application
+|-- React Application
+```
