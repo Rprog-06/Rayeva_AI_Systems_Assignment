@@ -251,6 +251,7 @@ frontend
     |   |-- ProposalForm.js
     |-- App.js
     |-- index.js
+```
 ## Designed Modules (Architecture Only)
 
 ### Module 3 - AI Impact Reporting Generator
