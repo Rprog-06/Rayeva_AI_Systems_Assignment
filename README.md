@@ -310,9 +310,6 @@ Supported queries include:
 - Refund requests
 - Escalation to human support
 
-## System Architecture
-
-The system follows a modular architecture separating frontend, backend, AI services, and database layers.
 
 
 
